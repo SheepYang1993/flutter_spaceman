@@ -52,7 +52,15 @@ class _SpacemanViewState extends State<SpacemanView> {
             (1 - 2 * Random().nextInt(2));
         int velocityY = (Random().nextInt(settings!.velocityYRange) + 1) *
             (1 - 2 * Random().nextInt(2));
-        ballList.add(Point(x, y, velocityX: velocityX, velocityY: velocityY));
+        Color color;
+        if (settings!.ballColors != null) {
+          color = settings!
+              .ballColors![Random().nextInt(settings!.ballColors!.length)];
+        } else {
+          color = Colors.green;
+        }
+        ballList.add(Point(x, y,
+            velocityX: velocityX, velocityY: velocityY, color: color));
       }
       widgetsBinding.addPersistentFrameCallback((callback) {
         // 持久帧的回调

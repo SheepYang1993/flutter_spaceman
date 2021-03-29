@@ -11,6 +11,9 @@ class Settings {
   /// 显示小球数量、捕获信息
   final bool showNumberHint;
 
+  // 背景颜色
+  final List<Color>? ballColors;
+
   /// 小球总数
   final int totalCount;
 
@@ -60,6 +63,7 @@ class Settings {
     this.videoAssetsUrl = '',
     this.showFrameRate = false,
     this.showNumberHint = false,
+    this.ballColors,
     this.velocityXRange = 6,
     this.velocityYRange = 6,
     this.maxDistance = 90,
