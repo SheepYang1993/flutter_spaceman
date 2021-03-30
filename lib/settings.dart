@@ -2,14 +2,6 @@ import 'package:flutter/material.dart';
 
 /// 配置信息
 class Settings {
-  // 背景动画资源路径
-  final String videoAssetsUrl;
-
-  /// 显示帧信息
-  final bool showFrameRate;
-
-  /// 显示小球数量、捕获信息
-  final bool showNumberHint;
 
   // 小球可取的颜色值
   final List<Color>? ballColors;
@@ -35,7 +27,7 @@ class Settings {
   /// 连线最大的透明度0~1
   final double maxAlpha;
 
-  /// 半径
+  /// 小球半径
   final double radius;
 
   /// 触摸影响半径
@@ -43,6 +35,9 @@ class Settings {
 
   /// 触摸影响半径
   final Color? touchColor;
+
+  // 背景动画资源路径
+  final String videoAssetsUrl;
 
   // 背景视频宽度
   final double videoWidth;
@@ -55,6 +50,12 @@ class Settings {
 
   // 背景视频y轴偏移量
   final double videoOffsetY;
+
+  /// 显示帧信息
+  final bool showFrameRate;
+
+  /// 显示小球数量、捕获信息
+  final bool showNumberHint;
 
   // 背景颜色
   final Color? backgroundColor;
