@@ -53,7 +53,7 @@ class _SpacemanViewState extends State<SpacemanView> {
         int velocityY = (Random().nextInt(settings!.velocityYRange) + 1) *
             (1 - 2 * Random().nextInt(2));
         Color color;
-        if (settings!.ballColors != null) {
+        if (settings!.ballColors != null && settings!.ballColors!.length > 0) {
           color = settings!
               .ballColors![Random().nextInt(settings!.ballColors!.length)];
         } else {

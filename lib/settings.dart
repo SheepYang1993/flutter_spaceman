@@ -11,7 +11,7 @@ class Settings {
   /// 显示小球数量、捕获信息
   final bool showNumberHint;
 
-  // 背景颜色
+  // 小球可取的颜色值
   final List<Color>? ballColors;
 
   /// 小球总数
