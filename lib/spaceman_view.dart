@@ -53,7 +53,7 @@ class _SpacemanViewState extends State<SpacemanView> {
         int velocityY = (Random().nextInt(settings!.velocityYRange) + 1) *
             (1 - 2 * Random().nextInt(2));
         Color color;
-        if (settings!.ballColors != null) {
+        if (settings!.ballColors != null && settings!.ballColors!.length > 0) {
           color = settings!
               .ballColors![Random().nextInt(settings!.ballColors!.length)];
         } else {
@@ -142,15 +142,16 @@ class _SpacemanViewState extends State<SpacemanView> {
     return Stack(
       children: [
         Positioned(
-            left: 0,
-            right: 0,
-            top: 0,
-            bottom: 0,
-            child: Container(
-              color: (settings!.backgroundColor == null)
-                  ? Colors.black
-                  : settings!.backgroundColor,
-            )),
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+          child: Container(
+            color: (settings!.backgroundColor == null)
+                ? Colors.black
+                : settings!.backgroundColor,
+          ),
+        ),
         Positioned(
           left: (width - settings!.videoWidth) / 2 +
               ((touchPoint == null)

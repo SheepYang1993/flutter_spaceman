@@ -11,9 +11,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^5.0.0
-  seekbar: ^0.0.2
-  fluttertoast: ^8.0.3
   video_player: ^2.1.0
 
 dev_dependencies:
